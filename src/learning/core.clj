@@ -91,3 +91,7 @@
 (println (->> clients
               (map #(count (:certificados %)))
               (reduce +)))
+(println (->> clients
+              (map :certificados)
+              (map count)
+              (reduce +)))
